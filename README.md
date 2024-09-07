@@ -32,7 +32,7 @@ The platform is designed to streamline city governance by improving communicatio
    ```
 2. Navigate to the project directory:
    ```bash
-   cd digital-city-governance-platform
+   cd CitySync
    ```
 3. Install dependencies:
    ```bash
