@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { doSignOut } from "../firebase/auth";
 
 function Navbar() {
   return (
@@ -19,7 +20,7 @@ function Navbar() {
           Dashboard
         </Link>
         <Link
-          to="/mapMain"
+          to="/explore"
           className="text-lg font-medium text-black relative hover:before:w-full before:w-0 before:h-0.5 before:bg-black before:absolute before:top-full before:left-0 before:transition-all before:duration-300"
         >
           Projects
@@ -31,7 +32,7 @@ function Navbar() {
           Explore
         </Link>
         <Link
-          to="/discussionForum"
+          to="/forum"
           className="text-lg font-medium text-black relative hover:before:w-full before:w-0 before:h-0.5 before:bg-black before:absolute before:top-full before:left-0 before:transition-all before:duration-300"
         >
           Discussion
@@ -40,6 +41,7 @@ function Navbar() {
       <div className="ml-auto">
         <button
           className="bg-blue-500 text-white font-medium text-sm py-2 px-6 rounded-lg hover:bg-gray-300 hover:text-gray-800 transition-all duration-300"
+          onClick={doSignOut}
         >
           Logout
         </button>
